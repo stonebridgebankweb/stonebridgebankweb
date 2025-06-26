@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stonebridge Bank Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Ho6dQtq9R7ckw9OvPZQ7qyaWQ2qMqlYKDci4JSVG+WvBiQfYr6VHwL0g9yVzE53Ql5wV4BBJ9J42aH+0OSvjdA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Only show hamburger on mobile */
+      .hamburger {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+        .sidebar {
+          display: none;
+        }
+        .sidebar.active {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <img
+            src="https://ik.imagekit.io/ruyderypf/Logo%20of%20Stonebridge%20Bank.png"
+            alt="Stonebridge Logo"
+          />
+        </div>
+        <ul class="menu">
+          <li class="active">Dashboard</li>
+          <li>Transactions</li>
+          <li>Transfer Funds</li>
+          <li>Settings</li>
+          <li>Logout</li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+          <div style="display: flex; align-items: center; gap: 1rem">
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <div class="greeting">Welcome back, Jeffrey Grambrell</div>
+          </div>
+          <img
+            src="https://ik.imagekit.io/c9zn6h9dn/j2.jpeg?updatedAt=1749904598498"
+            alt="Profile Picture"
+          />
+        </div>
+
+        <!-- Balance -->
+        <div class="balance-card">
+          <h3><i class="fas fa-wallet"></i> Current Balance</h3>
+          <p style="font-size: 2rem; font-weight: bold">
+            $<span id="balance-amount">0</span>
+          </p>
+        </div>
+
+        <!-- Info Grid -->
+        <div class="info-grid">
+          <div class="info-box"><i class="fas fa-user"></i>
+            <strong>Account Holder:</strong><br />Jeffrey Grambrell
+          </div>
+          <div class="info-box"><i class="fas fa-id-card"></i>
+            <strong>Account Number:</strong><br />008637773183
+          </div>
+          <div class="info-box"><i class="fas fa-university"></i>
+            <strong>Routing Number:</strong><br />662939338
+          </div>
+          <div class="info-box"><i class="fas fa-hashtag"></i>
+            <strong>Reference No:</strong><br />00785522
+          </div>
+          <div class="info-box"><i class="fas fa-calendar"></i>
+            <strong>Date of Birth:</strong><br />09/08/1969
+          </div>
+          <div class="info-box"><i class="fas fa-briefcase-medical"></i>
+            <strong>Occupation:</strong><br />Medical Doctor
+          </div>
+          <div class="info-box"><i class="fas fa-map-marker-alt"></i>
+            <strong>Address:</strong><br />3354 Granada Ave, San Diego, CA 92104
+          </div>
+          <div class="info-box"><i class="fas fa-building"></i>
+            <strong>Bank Branch:</strong><br />13005 Colima Rd., City of Industry, CA 91748
+          </div>
+          <div class="info-box"><i class="fas fa-chart-line"></i>
+            <strong>Credit Score:</strong><br />760
+          </div>
+          <div class="info-box"><i class="fas fa-arrow-up-right-dots"></i>
+            <strong>Transaction Limit:</strong><br />$20,000/day
+          </div>
+        </div>
+
+        <!-- Transactions -->
+        <section class="transactions">
+          <h3><i class="fas fa-clock-rotate-left"></i> Recent Transactions</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025-06-12</td>
+                <td>UNAID Transfer</td>
+                <td class="credit">+ $15,690</td>
+                <td>Completed</td>
+              </tr>
+              <tr>
+                <td>2023-11-22</td>
+                <td>Mike & Jessica Wolf</td>
+                <td class="credit">+ $30,000</td>
+                <td>Completed</td>
+              </tr>
+              <tr>
+                <td>2023-09-10</td>
+                <td>Coldwell Banker West</td>
+                <td class="credit">+ $48,000</td>
+                <td>Completed</td>
+              </tr>
+              <tr>
+                <td>2023-04-14</td>
+                <td>Wolf Real Estate Team</td>
+                <td class="credit">+ $40,000</td>
+                <td>Completed</td>
+              </tr>
+              <tr>
+                <td>2022-08-06</td>
+                <td>Fairfield-Residential</td>
+                <td class="credit">+ $50,801</td>
+                <td>Completed</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Illustrations -->
+        <section class="illustration" style="margin-top: 2rem; text-align: center">
+          <h3><i class="fas fa-image"></i>Empowering Your Financial Journey!!!</h3>
+          <img
+            src="https://ik.imagekit.io/c9zn6h9dn/SPI.png"
+            alt="Banking Illustration"
+            style="width: 100%; max-width: 600px; border-radius: 8px"
+          />
+          <img
+            src="https://ik.imagekit.io/ruyderypf/Payment%20Information-amico.png?updatedAt=1750564028870"
+            alt="Extra Banking Image"
+            style="width: 100%; max-width: 600px; border-radius: 8px; margin-top: 1rem"
+          />
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      style="
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        background-color: #000;
+        color: #fff;
+      "
+    >
+      &copy; 2025 Stonebridge Bank. All rights reserved.
+    </footer>
+
+    <!-- JS for Balance Animation + Sidebar Toggle -->
+    <script>
+      function animateBalance(id, targetAmount, duration = 2000) {
+        const element = document.getElementById(id);
+        const startTime = performance.now();
+
+        function update(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const value = Math.floor(progress * targetAmount);
+          element.textContent = value.toLocaleString();
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        }
+
+        requestAnimationFrame(update);
+      }
+
+      animateBalance("balance-amount", 243491);
+
+      // Toggle hamburger menu
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+
+      hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
